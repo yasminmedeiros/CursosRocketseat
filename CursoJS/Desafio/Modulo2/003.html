@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="item">
+        <button onclick="AdicionarItem()">Adicionar</button>
+        <ul id='lista'> </ul>
+    </div>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        function AdicionarItem() {
+            var item = document.querySelector('#item').nodeValue;
+            // nomes.push(item);
+            console.log(item);
+            /* (let value of nomes) {
+                var lista = documents.querySelector('#lista');
+                var novoElemento = document.createElement('li');
+                novoElemento.innerText = value;
+                lista.appendChild(novoElemento);
+            }*/
+        }
+        /*for s(let value of nomes) {
+            var lista = document.querySelector('#lista');
+            var novoElemento = document.createElement('li');
+            novoElemento.innerText = value;
+            lista.appendChild(novoElemento);
+        }*/
+    </script>
+</body>
+
+</html>

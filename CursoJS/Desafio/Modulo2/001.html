@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <button id="quadradobtn" onclick="NovoQuadrado()">Novo Quadrado</button>
+    <div id="quadrados"></div>
+
+    <script>
+        // function getRandomColor() {// função que sorteia uma cor aleatória
+        //     var letters = "0123456789ABCDEF";
+        //     var color = "#";
+        //     for (var i = 0; i < 6; i++) {
+        //       var hex = color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     console.log(hex)
+        // }
+
+        function NovoQuadrado() { // função que pera
+            var divElemento = document.querySelector('#quadrados');
+            var novoElemento = document.createElement('p');
+            novoElemento.className = 'quadrado';
+            novoElemento.style.backgroundColor = 'red';
+            novoElemento.style.width = '200px';
+            novoElemento.style.height = '200px';
+            divElemento.appendChild(novoElemento);
+            novoElemento.addEventListener("mouseover", function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    var hex = color += letters[Math.floor(Math.random() * 16)];
+                }
+                novoElemento.style.backgroundColor = hex;
+            });
+            novoElemento.addEventListener("mouseleave", function mouseOut() {
+                novoElemento.style.backgroundColor = 'red';
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: pink;
+            color: rgb(243, 9, 87);
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inciando Estudos com <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+    <script>
+        //window.document.write(window.document.charset)//UTF-8
+        //window.document.write(window.navigator.appName) //Netscape
+        //window.document.write(window.document.URL) //http://127.0.0.1:35888/AULA09/ex005.html
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write("Esta escrito: " + p1.innerText + `</br>`)
+        var p2 = window.document.getElementsByTagName('p')[1]
+            //Sem negrito
+        window.document.write("Esta escrito: " + p2.innerText)
+            //Com negrito, ou seja, formatado originalmente
+        window.document.write("Esta escrito: " + p2.innerHTML)
+            //Com as tags no alert
+            //window.alert("Esta escrito: " + p2.innerHTML)
+        p1.style.color = 'blue'
+            //corpo.style.background = 'black'
+    </script>
+</body>
+
+</html>
